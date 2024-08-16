@@ -11,7 +11,7 @@ RUN go mod download
 COPY . .
 RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -a -o demo-chatroom .
 
-FROM alpine:3.10 AS final
+FROM alpine:3.18.8 AS final
 
 WORKDIR /app
 
